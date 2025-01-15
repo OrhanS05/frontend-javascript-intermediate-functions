@@ -15,6 +15,23 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 6
+function countCumLaude(grades) {
+    let cumLaudeCount = 0; 
+
+   
+    for (let i = 0; i < grades.length; i++) {
+       
+        if (grades[i] >= 8) {
+            cumLaudeCount++; 
+        }
+    }
+
+    return cumLaudeCount; 
+}
+
+// Gebruik de functie en log het resultaat
+console.log(countCumLaude(grades)); // Verwachte uitkomst: 6
+
 
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
@@ -26,7 +43,25 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // cumLaude(grades) geeft 6
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
+// Functie die het aantal cum laude studenten telt
+function cumLaude(grades) {
+    let cumLaudeCount = 0; 
 
+
+    for (let i = 0; i < grades.length; i++) {
+        
+        if (grades[i] >= 8) {
+            cumLaudeCount++; 
+        }
+    }
+
+    return cumLaudeCount; 
+}
+
+
+console.log(cumLaude([9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6])); 
+console.log(cumLaude([6, 4, 5]));                                 
+console.log(cumLaude([8, 9, 4, 6, 10]));                          
 
 
 
@@ -42,6 +77,23 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // ---- Verwachte uitkomst: 6.642857142857143
 
+
+function calculateAverage(grades) {
+    let total = 0; 
+
+    
+    for (let i = 0; i < grades.length; i++) {
+        total += grades[i];
+    }
+
+   
+    const average = total / grades.length;
+
+    return average; 
+}
+
+
+console.log(calculateAverage(grades)); 
 
 /* 2b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
